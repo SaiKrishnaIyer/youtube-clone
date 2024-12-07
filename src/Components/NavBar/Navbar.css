@@ -1,0 +1,100 @@
+/* Navbar Container */
+nav {
+    padding: 10px 2%;
+    display: flex; /* Ensure proper alignment */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Left Section */
+.nav-left .menu-icon {
+    width: 22px;
+    margin-right: 25px;
+    cursor: pointer; /* Indicate interactivity */
+}
+
+.nav-left .logo {
+    width: 50px;
+}
+
+/* Middle Section (Search Box) */
+.nav-middle .search-box {
+    display: flex; /* Align icon and input */
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    transition: border-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-middle .search-box input {
+    width: 100%; /* Responsive width */
+    max-width: 400px; /* Restrict maximum size */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 8px; /* Ensure spacing inside input */
+    font-size: 14px;
+}
+
+.nav-middle .search-box img {
+    width: 15px;
+    cursor: pointer;
+}
+
+.nav-middle .search-box:hover {
+    border-color: #007bff; /* Change border color on hover */
+}
+
+/* Right Section */
+.nav-right img {
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Add subtle interaction effect */
+}
+
+.nav-right img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-right .user-icon {
+    width: 35px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-middle .search-box input {
+        max-width: 250px; /* Reduce width on smaller screens */
+    }
+
+    .nav-right img {
+        margin-right: 15px; /* Adjust spacing */
+    }
+
+    .nav-left .logo {
+        width: 100px; /* Scale down the logo */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-middle .search-box input {
+        max-width: 150px; /* Further reduce width for mobile */
+    }
+
+    .nav-right img {
+        width: 20px; /* Scale down icons */
+    }
+
+    .nav-right .user-icon {
+        width: 30px; /* Adjust profile icon size */
+    }
+}
